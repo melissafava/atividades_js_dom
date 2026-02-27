@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 4</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <p class="minhaClasse">Meu parágrafo</p>
+    <button id="meuBotao" onclick="mudarCor()">Mudar Cor</button>
+    <script>
+        let cores = ["red", "green", "yellow", "pink", "gray"];
+        let indiceCor = 0; //índice da cor atual do array
+
+        function mudarCor() {
+            //Acessa o elemento pelo seletor CSS
+            let p = document.querySelector(".minhaClasse");
+            // Altera a cor do texto do elemento
+            p.style.color = cores[indiceCor]
+            //Atualizar o índice da cor para a proxima no array
+            indiceCor = (indiceCor + 1) % cores.length;
+        }
+    </script>
+</body>
+
+</html>
